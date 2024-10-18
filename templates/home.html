@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首頁</title>
+</head>
+<body>
+    <h1>歡迎來到訂餐系統</h1>
+    <h2>顧客</h2>
+    <p>
+        <a href="{{ url_for('customers.login') }}">登入</a> |
+        <a href="{{ url_for('customers.register') }}">註冊</a>
+    </p>
+    <h2>店家</h2>
+    <p>
+        <a href="{{ url_for('restaurants.login') }}">登入</a> |
+        <a href="{{ url_for('restaurants.register') }}">註冊</a>
+    </p>
+</body>
+</html>
