@@ -1,8 +1,6 @@
-from flask import Flask, render_template, Response, request, redirect, url_for, Blueprint
-import subprocess
-import os
-import time
-from datetime import datetime
+from flask import Flask, render_template
+from customers.views import customers_blueprints
+from restaurants.views import restaurants_blueprints
 
 from customers.views import customers_blueprints
 from restaurants.views import restaurants_blueprints
@@ -14,8 +12,8 @@ app.register_blueprint(restaurants_blueprints, url_prefix='/restaurants')
 
 # 登入頁面
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
 
 # 訪客/店家頁面
 @app.route('/register')

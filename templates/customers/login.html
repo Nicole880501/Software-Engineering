@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>顧客登入</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px; /* 統一字體大小 */
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portal-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .portal-button:hover {
+            background-color: #0056b3;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>顧客登入</h1>
+        
+        <!-- 在校師生 Portal 登入按鈕 -->
+        <h2>在校師生登入</h2>
+        <a href="{{ url_for('customers.portal') }}" class="portal-button">在校師生 Portal 登入</a>
+        
+        <hr>
+        
+        <!-- 顧客登入表單 -->
+        <h2>訪客登入</h2>
+        <form action="{{ url_for('customers.login') }}" method="post">
+            帳號：<input type="text" name="username" required><br>
+            密碼：<input type="password" name="password" required><br>
+            <input type="submit" value="登入">
+        </form>
+        
+        <!-- 註冊連結 -->
+        <p>還沒有帳號？<a href="{{ url_for('customers.register') }}">註冊</a></p>
+    </div>
+</body>
+</html>

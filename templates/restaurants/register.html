@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>店家註冊</title>
+</head>
+<body>
+    <h1>店家註冊</h1>
+    <form action="{{ url_for('restaurants.register') }}" method="post">
+        帳號：<input type="text" name="username" required><br>
+        密碼：<input type="password" name="password" required><br>
+        確認密碼：<input type="password" name="confirm_password" required><br>
+        店家名稱：<input type="text" name="restaurant_name" required><br>
+        電話：<input type="text" name="phone" required><br>
+        地址：<input type="text" name="address" required><br>
+        營業時間：<input type="text" name="business_hours" required><br>
+        <input type="submit" value="註冊">
+    </form>
+    <p>已經有帳號？<a href="{{ url_for('restaurants.login') }}">登入</a></p>
+</body>
+</html>
