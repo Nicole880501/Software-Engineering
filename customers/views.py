@@ -21,7 +21,7 @@ SCOPE = 'id identifier chinese-name email mobile-phone personal-id'
 
 
 # 創建資料庫引擎
-DATABASE_URL = 'mysql+pymysql://cednjlyzwh:v0USi3Fg$vf8oNoT@se-temp-server.mysql.database.azure.com/campus_eats'
+DATABASE_URL = 'mysql+pymysql://auebtznvfn:Se113423000@ncucampuseats-server.mysql.database.azure.com/campus_eats'
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 
